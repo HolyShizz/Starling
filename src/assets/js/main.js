@@ -15,9 +15,9 @@ import "../../../node_modules/slick-carousel/slick/slick";
 
 $(document).ready(function(){
   $('.slick-carousel').slick({
-   slidesToShow: 1,
-   slidesToScroll: 1,
    infinite: true,
-   dots: true
+   dots: true,
+   arrows: false,
+   infinite: true
   });
 });
