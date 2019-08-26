@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 //Material ripple effect for mdc-button
 import {MDCRipple} from '@material/ripple';
 
@@ -24,4 +22,3 @@ $(document).ready(function(){
    adaptiveHeight: false
   });
 });
->>>>>>> Stashed changes
