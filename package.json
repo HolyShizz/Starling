@@ -16,6 +16,7 @@
     },
     "author": "Soltys Pylyp",
     "license": "ISC",
+    "browserslist": "defaults",
     "devDependencies": {
         "ajv": "^6.9.1",
         "autoprefixer": "^9.6.1",

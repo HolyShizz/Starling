@@ -25,19 +25,25 @@
 
         .mdc-button {
             @include mdc-button-ink-color(whitesmoke);
-            font-family: Monserrat-Regular, sans-serif;
+            @include mdc-button-ink-color($secondary-color);
         }
 
     }
 
     .mdc-card:nth-of-type(odd) {
         @include mdc-card-fill-color($secondary-color);
+
+        .mdc-button {
+            @include mdc-button-ink-color($primary-color);
+        }
+        
     }
 
     .mdc-card:nth-of-type(even) {
         .mdc-button {
             @include mdc-states-base-color($secondary-color);
         }
+
         p {
             color: $secondary-color;
         }
@@ -64,16 +70,68 @@
 //MaterialWeb Button Custom Styles
 .mdc-button {
     @include mdc-button-horizontal-padding(10px);
-    font-family: 'Montserrat-Regular', sans-serif;
+    height: 40px;
 }
 
-.mdc-button--topsection {
+.mdc-button--orange {
+    @include mdc-button-horizontal-padding(40px);
     @include mdc-button-container-fill-color(rgb(221, 21, 21));
     @include mdc-button-ink-color(whitesmoke);
-    height: 56px;
+    height: 80px;
 }
 
-.mdc-button--header {
+.mdc-button__header--ml {
     margin-left: 20px;
     height: 40px;
+}
+
+.mdc-button__icon--color-primary {
+    @include mdc-button-ink-color($primary-color);
+}
+
+.mdc-button__label--color-white {
+    @include mdc-button-ink-color(whitesmoke);
+
+}
+
+.mdc-button--hover:hover {
+    .mdc-button__label--color-white {
+        transition: width 300ms ease;
+        @include mdc-button-ink-color($primary-color);
+    }
+
+    .mdc-button__icon--color-primary {
+        transition: width 300ms ease;
+        @include mdc-button-ink-color(whitesmoke);
+    }
+
+}
+
+.mdc-button__icon--hover:hover {
+    @include mdc-button-ink-color(whitesmoke);
+}
+
+
+.mdc-button--light {
+    height: 57.6px;
+    @include mdc-button-container-fill-color($color-white);
+    @include mdc-button-ink-color($dark-text);
+}
+
+//MaterialWeb Icons Custom Styles
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 3.5rem;
 }

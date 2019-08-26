@@ -5,27 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Starling The Plumber</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4c7ef6f0ca.js"></script>
 </head>
 
 <body>
-    <header class="menu-container">
+    <header class="header">
         <div class="container-fluid">
-            <div class="menu row justify-content-end align-items-center">
-                <div class="logo-container">
-                    <img src="./assets/images/logo-white.png" alt="">
+            <div class="menu menu--desktop row justify-content-end align-items-center">
+                <div class="menu__logo-container">
+                    <img src="./assets/images/logo-white.png" alt="" class="menu__logo-content ">
                 </div>
-                <nav class="nav-desktop">
-                    <ul>
-                        <li><a href="#">Главная</a></li>
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Контакты</a></li>
-                        <li><a href="#">Услуги</a></li>
+                <nav class="d-none d-lg-flex">
+                    <ul class="nav nav--desktop">
+                        <li class="nav__item nav__item--desktop"><a href="#">Главная</a></li>
+                        <li class="nav__item nav__item--desktop"><a href="#">О нас</a></li>
+                        <li class="nav__item nav__item--desktop"><a href="#">Контакты</a></li>
+                        <li class="nav__item nav__item--desktop nav__item--last"><a href="#">Услуги</a></li>
                     </ul>
                 </nav>
-                <div class="contact">
-                    <a><span><i class="fas fa-phone-alt"></i> </span> 093 378 23 24</a>
-                    <button class="mdc-button mdc-button--header mdc-button--raised">
+                <div class="menu__contact d-none d-lg-flex">
+                    <button class="mdc-button mdc-button--hover">
+                        <svg class="mdc-button__icon mdc-button__icon--color-primary" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" d="M0 0h24v24H0V0z" />
+                            <path
+                                d="M19.23 15.26l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52c-.12-1.01-.97-1.77-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98z" />
+                        </svg>
+                        <span class="mdc-button__label global--font-main mdc-button__label--color-white"> 093 378 23
+                            24</span>
+                    </button>
+                    <button class="mdc-button mdc-button__header--ml mdc-button--raised">
                         <span class="mdc-button__label">Вызвать мастера</span>
                     </button>
                 </div>
@@ -33,32 +44,41 @@
         </div>
     </header>
     <section class="top-section">
-        <div class="container">
-            <div class="row justify-content-around align-items-center">
-                <div class="col-lg-6 col-md-12">
-                    <h2>САНТЕХНИК <span>ШПАК</span></h2>
-                    <p></p>
-                    <button class="mdc-button mdc-button--topsection mdc-button--raised">
-                        <span class="mdc-button__label">Рассчитать стоимость</span>
-                    </button>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <img src="./assets/images/background_transparent_01.png" alt="">
+        <div class="global__container global__container--padding-t-xl">
+
+            <div class="container-fluid">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-6 col-12 global--font-main-b global--text-align-responsive">
+                        <h2 class="title__header title--size-xl">Starling <span class="theme--primary">The
+                                Plumber</span>
+                        </h2>
+                        <div class="global--separator-25"></div>
+                        <p class="global--font-secondary">HAVE A PLUMBING ISSUE? <strong>CALL 24 HOUR EMERGENCY
+                                SERVICE.</strong>
+                        </p>
+                        <div class="global--separator-m"></div>
+                        <button class="mdc-button mdc-button--orange mdc-button--size-xl mdc-button--raised">
+                            <span class="mdc-button__label global--font-main-b">Рассчитать стоимость</span>
+                        </button>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <img class="img-fluid" src="./assets/images/background_transparent_01.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="benefits">
-        <div class="margin-container">
+        <div class="global__container global__container--padding-b-m">
             <div class="mdc-card-container">
-                <div class="mdc-card">
+                <div class="mdc-card mb-3">
                     <div class="benefit-card__media-1 mdc-card__media mdc-card__media--16-9">
                         <div class="mdc-card__media-content">
 
                         </div>
                     </div>
                     <div class="mdc-card__text-area">
-                        <h4>Resedential Plumbing</h4>
+                        <h4>residential Plumbing</h4>
                         <p>Trusted expert residential plumbing & repair, serving homes.</p>
                     </div>
                     <div class="mdc-card__actions">
@@ -67,12 +87,12 @@
                         </button>
                     </div>
                 </div>
-                <div class="mdc-card">
+                <div class="mdc-card mb-3">
                     <div class="benefit-card__media-2 mdc-card__media mdc-card__media--16-9">
 
                     </div>
                     <div class="mdc-card__text-area">
-                        <h4>Resedential Plumbing</h4>
+                        <h4>residential Plumbing</h4>
                         <p>Trusted expert residential plumbing & repair, serving homes.</p>
                     </div>
                     <div class="mdc-card__actions">
@@ -81,12 +101,12 @@
                         </button>
                     </div>
                 </div>
-                <div class="mdc-card">
+                <div class="mdc-card mb-3">
                     <div class="benefit-card__media-3 mdc-card__media mdc-card__media--16-9">
 
                     </div>
                     <div class="mdc-card__text-area">
-                        <h4>Resedential Plumbing</h4>
+                        <h4>residential Plumbing</h4>
                         <p>Trusted expert residential plumbing & repair, serving homes.</p>
                     </div>
                     <div class="mdc-card__actions">
@@ -98,44 +118,355 @@
             </div>
         </div>
     </section>
-    <section class="carousel-main-page">
-        <div class="slick-carousel">
+    <section class="carousel">
+        <div class="global__container global__container--padding-b-m">
+            <div class="slick-carousel">
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <img src="./assets/images/services_01.png" alt="">
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-xl-5">
+                            <img src="./assets/images/services_01.png" alt="" class="slick-img">
+                        </div>
+
+                        <div class="col-xl-6">
+                            <div class="global--font-main theme--dark-text">
+                                <span class="title__header--small global--font-secondary">Выгодное предложение</span>
+                                <div class="global--separator-s"></div>
+                                <h2 class="title__header title--size-m theme--dark-text">Узнайте больше <span
+                                        class="theme--primary">о наших Услугах и Ценах</span>
+                                </h2>
+                                <div class="global--separator-xl"></div>
+
+                                <div class="media-custom">
+                                    <div class="media-custom__icon-l">
+                                        <i class="fas fa-filter"></i>
+                                    </div>
+                                    <div class="media-custom__content-l">
+                                        <h3 class="media-l__headline global--font-main">Протечка воды</h3>
+                                        <p class="media-l__text global--font-secondary">If you live in an apartment
+                                            building, you’re sure to see a
+                                            sign put up by management to keep your faucet dripping.</p>
+                                    </div>
+                                </div>
+                                <div class="global--separator-m"></div>
+                                <div class="media-custom">
+                                    <div class="media-custom__icon-l">
+                                        <i class="fas fa-tools"></i>
+                                    </div>
+                                    <div class="media-custom__content-l">
+                                        <h3 class="media-l__headline global--font-main">Протечка воды</h3>
+                                        <p class="media-l__text global--font-secondary">If you live in an apartment
+                                            building, you’re sure to see a
+                                            sign put up by management to keep your faucet dripping.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-xl-6">
+                </div>
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-xl-5">
+                            <img src="./assets/images/services_02.png" alt="" class="slick-img">
+                        </div>
 
+                        <div class="col-xl-6">
+                            <div class="global--font-main theme--dark-text">
+                                <span class="title__header--small global--font-secondary">Выгодное предложение</span>
+                                <div class="global--separator-s"></div>
+                                <h2 class="title__header title--size-m theme--dark-text">Узнайте больше <span
+                                        class="theme--primary">о наших Услугах и Ценах</span>
+                                </h2>
+                                <div class="global--separator-xl"></div>
+
+                                <div class="media-custom">
+                                    <div class="media-custom__icon-l">
+                                        <i class="fas fa-filter"></i>
+                                    </div>
+                                    <div class="media-custom__content-l">
+                                        <h3 class="media-l__headline global--font-main">Протечка воды</h3>
+                                        <p class="media-l__text global--font-secondary">If you live in an apartment
+                                            building, you’re sure to see a
+                                            sign put up by management to keep your faucet dripping.</p>
+                                    </div>
+                                </div>
+                                <div class="global--separator-m"></div>
+                                <div class="media-custom">
+                                    <div class="media-custom__icon-l">
+                                        <i class="fas fa-tools"></i>
+                                    </div>
+                                    <div class="media-custom__content-l">
+                                        <h3 class="media-l__headline global--font-main">Протечка воды</h3>
+                                        <p class="media-l__text global--font-secondary">If you live in an apartment
+                                            building, you’re sure to see a
+                                            sign put up by management to keep your faucet dripping.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-xl-5">
+                            <img src="./assets/images/services_03.png" alt="" class="slick-img">
+                        </div>
+
+                        <div class="col-xl-6">
+                            <div class="global--font-main theme--dark-text">
+                                <span class="title__header--small global--font-secondary">Выгодное предложение</span>
+                                <div class="global--separator-s"></div>
+                                <h2 class="title__header title--size-m theme--dark-text">Узнайте больше <span
+                                        class="theme--primary">о наших Услугах и Ценах</span>
+                                </h2>
+                                <div class="global--separator-xl"></div>
+
+                                <div class="media-custom">
+                                    <div class="media-custom__icon-l">
+                                        <i class="fas fa-filter"></i>
+                                    </div>
+                                    <div class="media-custom__content-l">
+                                        <h3 class="media-l__headline global--font-main">Протечка воды</h3>
+                                        <p class="media-l__text global--font-secondary">If you live in an apartment
+                                            building, you’re sure to see a
+                                            sign put up by management to keep your faucet dripping.</p>
+                                    </div>
+                                </div>
+                                <div class="global--separator-m"></div>
+                                <div class="media-custom">
+                                    <div class="media-custom__icon-l">
+                                        <i class="fas fa-tools"></i>
+                                    </div>
+                                    <div class="media-custom__content-l">
+                                        <h3 class="media-l__headline global--font-main">Протечка воды</h3>
+                                        <p class="media-l__text global--font-secondary">If you live in an apartment
+                                            building, you’re sure to see a
+                                            sign put up by management to keep your faucet dripping.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="theme--bg-primary">
+        <div class="global__container global__container--padding-tb-s">
+            <div class="container-fluid">
+                <div class="row justify-content-between align-items-stretch global--text-align-responsive ">
+                    <div class="col-lg-8 col-12 mb-1 mt-1">
+                        <h3 class="global--font-main title--size-m title__header">Are you interested in an estimate?
+                        </h3>
+                    </div>
+                    <div class="col-lg-3 col-12 mb-1 mt-1 align-self-auto">
+                        <button class="mdc-button mdc-button--raised mdc-button--light global--font-main-b">
+                            <span class="mdc-button__label">Заказать просчёт</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="advantages advantages__bg">
+        <div class="global__container--padding-tb-xl global__container">
+
+            <div class="container-fluid">
+                <div class="row justify-content-between">
+                    <div class="col-12">
+                        <div class="title__header--background-square">
+                            <h3 class="title__header title--size-x global--font-main-b">
+                                Regular <span class="theme--primary">plumbing care</span> <br>
+                                will save your time & money
+                            </h3>
+                        </div>
+                        <div class="global--separator-xl"></div>
+                    </div>
+                    <div class="col-xl-3 col-12 mb-5">
+                        <div class="counter__container global--font-main-b title__header title--size-xl">
+                            <div class="counter__symbols-holder">
+                                <div class="counter__digit-item counter--animated">
+                                    <span>6</span>
+                                </div>
+                                <div class="counter__digit-item counter--animated">
+                                    <span>0</span>
+                                </div>
+                                <span class="counter__text-item global--font-main">%</span>
+                            </div>
+                            <div class="global--separator-s"></div>
+                            <p class="counter__description global--font-secondary">
+                                Household water usage that goes to toilets, showers & faucets
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-12 mb-5">
+                        <div class="counter__container global--font-main-b title__header title--size-xl">
+                            <div class="counter__symbols-holder">
+                                <div class="counter__digit-item counter--animated">
+                                    <span>1</span>
+                                </div>
+                                <div class="counter__digit-item counter--animated">
+                                    <span>2</span>
+                                </div>
+                                <div class="counter__digit-item counter--animated">
+                                    <span>0</span>
+                                </div>
+                                <span class="counter__text-item global--font-main">$</span>
+                            </div>
+                            <div class="global--separator-s"></div>
+                            <p class="counter__description global--font-secondary">
+                                Yearly savings by servicing your water leaks with 24 hour services available
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-12 mb-5">
+                        <div class="counter__container global--font-main-b title__header title--size-xl">
+                            <div class="counter__symbols-holder">
+                                <div class="counter__digit-item counter--animated">
+                                    <span>7</span>
+                                </div>
+                                <div class="counter__digit-item counter--animated">
+                                    <span>0</span>
+                                </div>
+                                <div class="counter__digit-item counter--animated">
+                                    <span>0</span>
+                                </div>
+
+                                <span class="counter__text-item global--font-main">L</span>
+                            </div>
+                            <div class="global--separator-s"></div>
+                            <p class="counter__description global--font-secondary">
+                                The average US family can waste from household leaks
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <img src="./assets/images/services_01.png" alt="">
-                    </div>
-                    <div class="col-xl-6">
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <img src="./assets/images/services_01.png" alt="">
-                    </div>
-                    <div class="col-xl-6">
-
-                    </div>
-                </div>
-            </div>
 
         </div>
     </section>
+
+    <footer class="theme--bg-footer">
+        <div class="global__container global__container--padding-tb-s">
+            <div class="container-fluid">
+                <div class="row align-items-xl-start align-items-baseline justify-content-around">
+                    <div class="col-xl-3 col-md-6 col-12">
+                            <div class="global--separator-x"></div>
+                        <div class="title__header--underline">
+                            <h3 class="title--size-s global--font-main">
+                                Контакты
+                            </h3>
+                        </div>
+                        <div class="global--separator-25"></div>
+                        <ul class="footer__menu-container  global--font-secondary theme--white-text">
+                            <li class="footer__menu-icons footer__menu-icons--hover footer__menu-icons--justify-start">
+                                <i class="fas fa-phone-volume global--font-size-s"></i>
+                                <a href="#">
+                                    8(093) 458-58-58
+                                </a>
+                            </li>
+                            <li class="footer__menu-icons footer__menu-icons--hover footer__menu-icons--justify-start">
+                                <i class="fas fa-map-marker-alt global--font-size-s"></i>
+                                <a href="#">
+                                    г. Киев, Оболонь, ул. Приозерная 10г
+                                </a>
+                            </li>
+                            <li class="footer__menu-icons footer__menu-icons--hover footer__menu-icons--justify-start">
+                                <i class="far fa-envelope global--font-size-s"></i>
+                                <a href="#">
+                                    info@starling.com.ua
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="global--separator-25"></div>
+                        <div
+                            class="footer__menu-icons footer__menu-icons--hover-reverse footer__menu-icons--justify-start global--font-size-m">
+                            <i class="fab fa-facebook-square"></i>
+                            <i class="fab fa-twitter-square"></i>
+                            <i class="fab fa-youtube-square"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12">
+                            <div class="global--separator-x"></div>
+                        <div class="title__header--underline">
+                            <h3 class="title--size-s global--font-main">
+                                Popular Services
+                            </h3>
+                        </div>
+                        <div class="global--separator-25"></div>
+                        <ul
+                            class="footer__menu-container footer__menu-container--bb global--font-secondary theme--white-text">
+                            <li>
+                                <a href="#">Furnace Inspection</a>
+                            </li>
+                            <li>
+                                <a href="#">Dry Sanitation</a>
+                            </li>
+                            <li>
+                                <a href="#">Water Filter</a>
+                            </li>
+                            <li>
+                                <a href="#">Basic Sanitation</a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12">
+                            <div class="global--separator-x"></div>
+                        <div class="title__header--underline">
+                            <h3 class="title--size-s global--font-main">
+                                Emergency Tips
+                            </h3>
+                        </div>
+                        <div class="global--separator-25"></div>
+                        <ul
+                            class="footer__menu-container footer__menu-container--bb global--font-secondary theme--white-text">
+                            <li>
+                                <a href="#">Pipe Leaking</a>
+                            </li>
+                            <li>
+                                <a href="#">Bathroom Drain Cleaning</a>
+                            </li>
+                            <li>
+                                <a href="#">Garden Irrigation</a>
+                            </li>
+                            <li>
+                                <a href="#">Law Drainage</a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12">
+                            <div class="global--separator-x"></div>
+                        <div class="title__header--underline">
+                            <h3 class="title--size-s global--font-main">
+                                Emergency Service
+                            </h3>
+                        </div>
+                        <div class="global--separator-25"></div>
+                        <ul class="footer__menu-container global--font-secondary theme--white-text">
+                            <li class="footer__menu-icons footer__menu-icons--hover title--size-s">
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="#">
+                                    (044) 222-22-22
+                                </a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>

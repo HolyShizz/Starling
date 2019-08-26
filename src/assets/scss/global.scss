@@ -15,3 +15,126 @@ html, body {
     min-height: 100vh;
     color: whitesmoke;
 }
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.global--font-main-b {
+    font-family: 'Montserrat-Bold', sans-serif;
+}
+
+.global--font-main {
+    font-family: 'Montserrat-Regular', sans-serif;
+}
+
+.global--font-secondary {
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    min-height: 100vh;
+    color: whitesmoke;
+    font-size: 100%;
+}
+
+.theme--primary {
+    color: $primary-color;
+}
+
+.theme--orange {
+    color: $accent-color;
+}
+
+.theme--white-text {
+    color: $color-whitesmoke;
+}
+
+.theme--dark-text {
+    color: $dark-text;
+}
+
+.theme--bg-primary {
+    background-color: $primary-color;
+}
+
+.theme--bg-footer {
+    background-color: $footer-dark;
+}
+
+.theme--bg-white {
+    background-color: $color-white;
+}
+
+.global--separator-xl {
+    margin-bottom: 4em;
+    display: block;
+    width: 100%;
+    clear: both;
+    font-size: 16px;
+}
+
+.global--separator-x {
+    margin-bottom: 3em;
+    display: block;
+    width: 100%;
+    clear: both;
+    font-size: 16px;
+}
+
+.global--separator-m {
+    margin-bottom: 2em;
+    display: block;
+    width: 100%;
+    clear: both;
+    font-size: 16px;
+}
+
+.global--separator-s {
+    margin-bottom: 1em;
+    display: block;
+    width: 100%;
+    clear: both;
+    font-size: 16px;
+}
+
+.global--separator-25 {
+    margin-bottom: 25px;
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.global--font-size-s {
+    font-size: 1.2em;
+}
+
+.global--font-size-m {
+    font-size: 2em;
+}
+
+.global__container {
+    width: 1200px;
+    max-width: 95%;
+    margin: auto;
+}
+
+.global__container--padding-t-xl {
+    padding: 8em 0;
+}
+
+.global__container--padding-b-m {
+    padding-bottom: 4em;
+}
+
+.global__container--padding-tb-s {
+    padding: 2em 0;
+}
+
+.global__container--padding-tb-xl {
+    padding: 8em 0;
+}
+
+.global--text-align-responsive {
+    text-align: left;
+}
