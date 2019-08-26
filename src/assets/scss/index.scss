@@ -1,0 +1,36 @@
+<<<<<<< Updated upstream
+=======
+@import "./variables.scss";
+
+//Normalize.css
+@import "../../../node_modules/normalize.css/normalize.css";
+
+//Bootstrap grid
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+//@import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+
+//Material Theme Customizing
+$mdc-theme-primary: $primary-color;
+$mdc-theme-secondary: whitesmoke;
+$mdc-theme-on-primary: whitesmoke;
+$mdc-theme-on-secondary: whitesmoke;
+
+//MaterialWeb Button
+@import "@material/button/mdc-button";
+
+
+
+//MaterialWeb Card
+@import "@material/card/mdc-card";
+
+//Slick Carousel
+@import "../../../node_modules/slick-carousel/slick/slick.css";
+@import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+
+//Custom Styles
+@import "./global.scss";
+@import "./modules.scss";
+@import "./components.scss";
+@import "./media.scss";
+>>>>>>> Stashed changes

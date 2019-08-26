@@ -98,7 +98,7 @@ module.exports = {
                 use: [{
                         loader: 'file-loader',
                         options: {
-                            outputPath: 'images/',
+                            outputPath: 'assets/images/',
                             name: '[name].[ext]',
                         },
                     },
@@ -110,7 +110,10 @@ module.exports = {
         ]
     },
     plugins: [
-
+        new HtmlWebpackPlugin({ 
+          template: './src/index.html',
+          inject: true
+        }),
         new CleanWebpackPlugin(buildPath),
 
         new MiniCssExtractPlugin({
@@ -151,7 +154,7 @@ module.exports = {
               },
             },
           }],
-        })
+        }),
 
     ],
     optimization: {

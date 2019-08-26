@@ -1,0 +1,138 @@
+//MaterialWeb Card Custom Styles
+.benefit-card__media-1 {
+    background-image: url("../images/inner_01.jpg")
+}
+
+.benefit-card__media-2 {
+    background-image: url("../images/inner_02.jpg")
+}
+
+.benefit-card__media-3 {
+    background-image: url("../images/inner_03.jpg")
+}
+
+.mdc-card__text-area,
+.mdc-card__actions {
+    padding: 10px 2em;
+}
+
+.mdc-card-container {
+    font-family: Monserrat-Regular, sans-serif;
+    position: relative;
+
+    .mdc-card {
+        @include mdc-card-fill-color($primary-color);
+        @include mdc-card-shape-radius(0px, false);
+
+        .mdc-button {
+            @include mdc-button-ink-color($secondary-color);
+            font-family: Monserrat-Regular, sans-serif;
+        }
+
+    }
+
+    .mdc-card:nth-of-type(odd) {
+        @include mdc-card-fill-color($secondary-color);
+
+        .mdc-button {
+            @include mdc-button-ink-color($primary-color);
+        }
+        
+    }
+
+    .mdc-card:nth-of-type(even) {
+        .mdc-button {
+            @include mdc-states-base-color($secondary-color);
+        }
+
+        p {
+            color: $secondary-color;
+        }
+    }
+
+    h4 {
+        margin-top: 1.5rem;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+
+    p {
+        color: $primary-color;
+        margin-top: 1.1em;
+        line-height: 1.75em;
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+}
+
+
+
+//MaterialWeb Button Custom Styles
+.mdc-button {
+    @include mdc-button-horizontal-padding(10px);
+    height: 40px;
+}
+
+.mdc-button--orange {
+    @include mdc-button-horizontal-padding(40px);
+    @include mdc-button-container-fill-color(rgb(221, 21, 21));
+    @include mdc-button-ink-color(whitesmoke);
+    height: 80px;
+}
+
+.mdc-button__header--ml {
+    margin-left: 20px;
+    height: 40px;
+}
+
+.mdc-button__icon--color-primary {
+    @include mdc-button-ink-color($primary-color);
+}
+
+.mdc-button__label--color-white {
+    @include mdc-button-ink-color(whitesmoke);
+
+}
+
+.mdc-button--hover:hover {
+    .mdc-button__label--color-white {
+        transition: width 300ms ease;
+        @include mdc-button-ink-color($primary-color);
+    }
+
+    .mdc-button__icon--color-primary {
+        transition: width 300ms ease;
+        @include mdc-button-ink-color(whitesmoke);
+    }
+
+}
+
+.mdc-button__icon--hover:hover {
+    @include mdc-button-ink-color(whitesmoke);
+}
+
+
+.mdc-button--light {
+    height: 57.6px;
+    @include mdc-button-container-fill-color($color-white);
+    @include mdc-button-ink-color($dark-text);
+}
+
+//MaterialWeb Icons Custom Styles
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 3.5rem;
+}
