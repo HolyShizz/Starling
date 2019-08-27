@@ -4,6 +4,7 @@
     background-image: url("../images/background_01.jpg");
     background-attachment: fixed;
 }
+
 //Header styles
 .header {
     width: 100%;
@@ -32,6 +33,9 @@
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    transition: 15ms linear;
 }
 
 .menu__logo-content {
@@ -145,6 +149,53 @@ section.benefits {
     }
 }
 
+//Animated icons
+.icons {
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2.3rem 0 0;
+    width: 1.25rem;
+    height: 2.6rem;
+
+    i {
+        position: absolute;
+        top: auto;
+        transform: translatex(-50%);
+        left: 15px;
+        display: block;
+        font-size: 24px;
+    }
+
+    .icon-default {
+        transition: opacity .3s, transform .3s;
+    }
+
+    .icon-hover {
+        transition: opacity .3s, transform .3s;
+        transform: rotate(-180deg) scale(.5);
+        opacity: 0;
+    }
+    &:hover {
+        transform: scale(1.2);
+        //box-shadow: 20px 15px rgba(0, 0, 0, 0.15);
+    
+        .icon-hover {
+            transform: rotate(0deg) scale(1);
+            opacity: 1;
+            color: $secondary-color;
+        }
+    
+        .icon-default {
+            transform: rotate(180deg) scale(.5);
+            opacity: 0;
+        }
+    }
+}
+
+
 
 //Slick-slider custom styles
 .carousel {
@@ -169,19 +220,21 @@ section.benefits {
     align-items: center;
     justify-content: space-between;
 }
+
 .media-custom__icon-l {
     font-size: 3.5rem;
     color: $primary-color;
     transition: 300ms ease;
+
     &:hover {
         color: $dark-text;
     }
 }
 
 .media-custom__content-l {
-   padding: 0;
-   margin: 0;
-   padding-left: 1em; 
+    padding: 0;
+    margin: 0;
+    padding-left: 1em;
 }
 
 .media-l__headline {
@@ -199,6 +252,7 @@ section.benefits {
     margin: 0;
     font-weight: 400;
 }
+
 //Title styles
 .title__header {
     margin: 0;
@@ -244,14 +298,14 @@ section.benefits {
 }
 
 .title__header--underline:after {
-        margin-top: .7em;
-        margin-bottom: 0;
-        width: 1.5em;
-        border-style: solid;
-        border-width: 0 0 2px;
-        border-color: $color-whitesmoke;
-        content: ' ';
-        display: block;
+    margin-top: .7em;
+    margin-bottom: 0;
+    width: 1.5em;
+    border-style: solid;
+    border-width: 0 0 2px;
+    border-color: $color-whitesmoke;
+    content: ' ';
+    display: block;
 }
 
 .title__header--background-square {
@@ -261,6 +315,7 @@ section.benefits {
     justify-content: center;
     position: relative;
     z-index: 1;
+
     &:before {
         content: ' ';
         z-index: -1;
@@ -280,6 +335,7 @@ section.benefits {
         border-color: $color-white;
     }
 }
+
 //Section advantages 
 .advantages {
     background-color: $dark-background;
@@ -307,7 +363,7 @@ section.benefits {
 
 .counter__text-item {
     font-weight: 500;
-   }
+}
 
 .counter__description {
     margin: 0;
@@ -320,9 +376,10 @@ section.benefits {
 .footer__menu-container {
     padding: 0;
     margin: 0;
+
     li {
         list-style-type: none;
-        padding: .8rem 0; 
+        padding: .8rem 0;
         margin-left: 0;
         outline: 0;
     }
@@ -331,6 +388,7 @@ section.benefits {
         color: $color-whitesmoke;
         text-decoration: none;
         transition: all 200ms ease-in-out;
+
         &:hover {
             color: $primary-color;
         }
@@ -338,7 +396,7 @@ section.benefits {
 }
 
 .footer__menu-container--bb li {
-    border-bottom: 1px solid rgba(255,255,255,.3);
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
 .footer__menu-icons {
@@ -346,11 +404,11 @@ section.benefits {
     flex-direction: row;
     align-items: center;
     transition: all 200ms ease-in-out;
-        
+
     a {
         transition: all 200ms ease-in-out;
     }
-    
+
     i {
         padding: 0 1em 0 0;
         transition: all 200ms ease-in-out;
@@ -358,7 +416,7 @@ section.benefits {
 }
 
 .footer__menu-icons--hover-reverse {
-   
+
     i {
         color: $color-whitesmoke;
     }
@@ -370,24 +428,24 @@ section.benefits {
 }
 
 .footer__menu-icons--hover {
-    
+
     i {
         color: $accent-color;
     }
 
     &:hover {
-    
+
         a {
             color: $primary-color;
         }
-        
+
         i {
             color: $color-whitesmoke;
         }
-    
+
     }
-    
-   
+
+
 }
 
 .footer__menu-icons--justify-start {

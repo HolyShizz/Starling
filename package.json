@@ -48,6 +48,8 @@
     "dependencies": {
         "@material/button": "^3.1.0",
         "@material/card": "^3.1.0",
+        "@material/drawer": "^3.1.1",
+        "@material/top-app-bar": "^3.1.0",
         "bootstrap": "^4.3.1",
         "jquery": "^3.4.1",
         "normalize.css": "^8.0.1",

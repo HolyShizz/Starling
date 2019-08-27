@@ -20,9 +20,17 @@ $mdc-theme-on-secondary: whitesmoke;
 //MaterialWeb Card
 @import "@material/card/mdc-card";
 
+//Material Top-App Bar 
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/icon-button/mdc-icon-button";
+
 //Slick Carousel
 @import "../../../node_modules/slick-carousel/slick/slick.css";
 @import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+
+//Material Drawer
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
 
 //Custom Styles
 @import "./global.scss";

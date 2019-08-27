@@ -118,20 +118,13 @@
     @include mdc-button-ink-color($dark-text);
 }
 
-//MaterialWeb Icons Custom Styles
+//MDC Drawer styles
 
-.material-icons.md-18 {
-    font-size: 18px;
+.drawer-toggle {
+    transition: 200ms linear;
 }
 
-.material-icons.md-24 {
-    font-size: 24px;
+.drawer-toggle--opened {
+    left: 276px !important;
 }
-
-.material-icons.md-36 {
-    font-size: 36px;
-}
-
-.material-icons.md-48 {
-    font-size: 3.5rem;
-}
+ 

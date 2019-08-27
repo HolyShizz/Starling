@@ -23,10 +23,13 @@
 
     .menu__logo-container {
         left: 25px;
+        img {
+            padding-left: 20px;
+        }
     }
 
     .menu__logo-content {
-        height: 4em;
+        height: 3em;
     }
 
     .top-section .global__container--padding-t-xl {
