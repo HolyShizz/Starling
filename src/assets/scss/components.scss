@@ -125,6 +125,31 @@
 }
 
 .drawer-toggle--opened {
-    left: 276px !important;
+    left: 265px !important;
+    img {
+        display: none;
+    }
 }
- 
+
+.mdc-drawer {
+    @include mdc-drawer-surface-fill-color($primary-color);
+    @include mdc-drawer-item-text-ink-color($dark-text);
+    @include mdc-drawer-item-activated-text-ink-color($color-whitesmoke);
+    @include mdc-drawer-activated-overlay-color($color-white); 
+}
+
+.mdc-drawer__title {
+    
+    img {
+        width: 90px;
+        height: auto;
+        margin: auto;
+    }
+}
+//MDC Top App Bar Styles
+
+.mdc-top-app-bar {
+    @include mdc-top-app-bar-fill-color(rgba(255,255,255,.2));
+    @include mdc-top-app-bar-icon-ink-color($color-whitesmoke);
+    @include mdc-top-app-bar-ink-color($color-whitesmoke);
+}

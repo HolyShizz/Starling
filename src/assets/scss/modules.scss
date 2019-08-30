@@ -156,17 +156,19 @@ section.benefits {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 2.3rem 0 0;
-    width: 1.25rem;
+    margin: 0;
+    width: 2rem;
     height: 2.6rem;
-
+    
     i {
         position: absolute;
-        top: auto;
-        transform: translatex(-50%);
-        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
         display: block;
         font-size: 24px;
+        width: 24px;
+        height: 24px;
     }
 
     .icon-default {
@@ -178,24 +180,24 @@ section.benefits {
         transform: rotate(-180deg) scale(.5);
         opacity: 0;
     }
-    &:hover {
-        transform: scale(1.2);
-        //box-shadow: 20px 15px rgba(0, 0, 0, 0.15);
     
-        .icon-hover {
-            transform: rotate(0deg) scale(1);
-            opacity: 1;
-            color: $secondary-color;
-        }
-    
-        .icon-default {
-            transform: rotate(180deg) scale(.5);
-            opacity: 0;
-        }
-    }
 }
 
+.drawer-toggle--opened .icons {
+ 
+    //box-shadow: 20px 15px rgba(0, 0, 0, 0.15);
 
+    .icon-hover {
+        transform: rotate(0deg) scale(1) translateY(-50%);
+        opacity: 1;
+        color: $secondary-color;
+    }
+
+    .icon-default {
+        transform: rotate(180deg) scale(.5);
+        opacity: 0;
+    }
+}
 
 //Slick-slider custom styles
 .carousel {
