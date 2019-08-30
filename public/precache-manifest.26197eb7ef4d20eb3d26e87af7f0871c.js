@@ -4,11 +4,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/images/ajax-loader.gif"
   },
   {
-    "revision": "822332dddc7123481649",
+    "revision": "f6b49d305075e18bb37b",
     "url": "bundle.js"
   },
   {
-    "revision": "822332dddc7123481649",
+    "revision": "f6b49d305075e18bb37b",
     "url": "bundle.js.map"
   },
   {
@@ -40,15 +40,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "fonts/slick.woff"
   },
   {
-    "revision": "7dc076218caf9fc528dcc52ff7db0cf4",
+    "revision": "2102aafbd3e581236b80f662de8ab9a4",
     "url": "index.html"
   },
   {
-    "revision": "822332dddc7123481649",
+    "revision": "f6b49d305075e18bb37b",
     "url": "styles.css"
   },
   {
-    "revision": "5a9114033c2671f846fd1ccff43f4103",
+    "revision": "e14056ae78ee76f67824721376d702d0",
     "url": "styles.css.map"
   }
 ]);
