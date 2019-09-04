@@ -24,13 +24,16 @@ $mdc-theme-on-secondary: whitesmoke;
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/icon-button/mdc-icon-button";
 
-//Slick Carousel
-@import "../../../node_modules/slick-carousel/slick/slick.css";
-@import "../../../node_modules/slick-carousel/slick/slick-theme.css";
-
 //Material Drawer
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
+
+//Material Web Image List
+@import "@material/image-list/mdc-image-list";
+
+//Slick Carousel
+@import "../../../node_modules/slick-carousel/slick/slick.css";
+@import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 
 //Custom Styles
 @import "./global.scss";

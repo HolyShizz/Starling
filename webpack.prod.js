@@ -1,29 +1,35 @@
 const path = require('path');
 
 function tryResolve_(url, sourceFilename) {
-  // Put require.resolve in a try/catch to avoid node-sass failing with cryptic libsass errors
-  // when the importer throws
-  try {
-    return require.resolve(url, {paths: [path.dirname(sourceFilename)]});
-  } catch (e) {
-    return '';
-  }
+    // Put require.resolve in a try/catch to avoid node-sass failing with cryptic libsass errors
+    // when the importer throws
+    try {
+        return require.resolve(url, {
+            paths: [path.dirname(sourceFilename)]
+        });
+    } catch (e) {
+        return '';
+    }
 }
 
 function tryResolveScss(url, sourceFilename) {
-  // Support omission of .scss and leading _
-  const normalizedUrl = url.endsWith('.scss') ? url : `${url}.scss`;
-  return tryResolve_(normalizedUrl, sourceFilename) ||
-    tryResolve_(path.join(path.dirname(normalizedUrl), `_${path.basename(normalizedUrl)}`),
-      sourceFilename);
+    // Support omission of .scss and leading _
+    const normalizedUrl = url.endsWith('.scss') ? url : `${url}.scss`;
+    return tryResolve_(normalizedUrl, sourceFilename) ||
+        tryResolve_(path.join(path.dirname(normalizedUrl), `_${path.basename(normalizedUrl)}`),
+            sourceFilename);
 }
 
 function materialImporter(url, prev) {
-  if (url.startsWith('@material')) {
-    const resolved = tryResolveScss(url, prev);
-    return {file: resolved || url};
-  }
-  return {file: url};
+    if (url.startsWith('@material')) {
+        const resolved = tryResolveScss(url, prev);
+        return {
+            file: resolved || url
+        };
+    }
+    return {
+        file: url
+    };
 }
 
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
@@ -80,9 +86,9 @@ module.exports = {
                     {
                         loader: 'sass-loader',
                         options: {
-                          importer: materialImporter
+                            importer: materialImporter
                         },
-                      }
+                    }
                 ]
             },
             {
@@ -110,9 +116,18 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({ 
-          template: './src/indexW.html',
-          inject: true
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            inject: true,
+            chunks: 'index',
+            filename: 'index.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            template: './src/aboutUs.html',
+            inject: true,
+            chunks: 'index',
+            filename: 'aboutUs.html'
         }),
         new CleanWebpackPlugin(buildPath),
 
@@ -133,51 +148,51 @@ module.exports = {
         }),
 
         new WorkboxPlugin.GenerateSW({
-          // Exclude images from the precache
-          exclude: [/\.(?:png|jpg|jpeg|svg)$/],
-    
-          // Define runtime caching rules.
-          runtimeCaching: [{
-            // Match any request ends with .png, .jpg, .jpeg or .svg.
-            urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-    
-            // Apply a cache-first strategy.
-            handler: 'CacheFirst',
-    
-            options: {
-              // Use a custom cache name.
-              cacheName: 'images',
-    
-              // Only cache 10 images.
-              expiration: {
-                maxEntries: 10,
-              },
-            },
-          }],
+            // Exclude images from the precache
+            exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+
+            // Define runtime caching rules.
+            runtimeCaching: [{
+                // Match any request ends with .png, .jpg, .jpeg or .svg.
+                urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+
+                // Apply a cache-first strategy.
+                handler: 'CacheFirst',
+
+                options: {
+                    // Use a custom cache name.
+                    cacheName: 'images',
+
+                    // Only cache 10 images.
+                    expiration: {
+                        maxEntries: 10,
+                    },
+                },
+            }],
         }),
 
     ],
     optimization: {
         splitChunks: {
-          chunks: 'async',
-          minSize: 30000,
-          maxSize: 0,
-          minChunks: 1,
-          maxAsyncRequests: 5,
-          maxInitialRequests: 3,
-          automaticNameDelimiter: '~',
-          name: true,
-          cacheGroups: {
-            vendors: {
-              test: /[\\/]node_modules[\\/]/,
-              priority: -10
-            },
-            default: {
-              minChunks: 2,
-              priority: -20,
-              reuseExistingChunk: true
+            chunks: 'async',
+            minSize: 30000,
+            maxSize: 0,
+            minChunks: 1,
+            maxAsyncRequests: 5,
+            maxInitialRequests: 3,
+            automaticNameDelimiter: '~',
+            name: true,
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10
+                },
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true
+                }
             }
-          }
         }
-      }
+    }
 };

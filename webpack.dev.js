@@ -127,9 +127,20 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/indexW.html',
-            inject: true
+            //template: './src/aboutUs.html',
+            template: './src/index.html',
+            inject: true,
+            chunks: 'index',
+            filename: 'index.html'
         }),
+        
+        new HtmlWebpackPlugin({
+            template: './src/aboutUs.html',
+            inject: true,
+            chunks: 'index',
+            filename: 'aboutUs.html'
+        }),
+       
         new WorkboxPlugin.GenerateSW({
             // Exclude images from the precache
             exclude: [/\.(?:png|jpg|jpeg|svg)$/],

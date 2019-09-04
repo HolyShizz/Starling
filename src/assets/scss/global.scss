@@ -11,10 +11,34 @@
     font-style: normal;
 }
 
-html, body {
+body {
     min-height: 100vh;
     color: whitesmoke;
 }
+
+a {
+    text-decoration: none;
+    transition: all 0.3ms ease-in-out;
+}
+
+a:hover {
+    text-decoration: none;
+    color: $primary-color;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 100%;
+    height: 100%;
+}
+
 p {
     margin: 0;
     padding: 0;
@@ -32,10 +56,8 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
-html, body {
-    min-height: 100vh;
-    color: whitesmoke;
-    font-size: 100%;
+.global--font-secondary-b {
+    font-weight: 600;   
 }
 
 .theme--primary {
@@ -118,13 +140,13 @@ html, body {
 }
 
 .global__container {
-    width: 1200px;
-    max-width: 95%;
+    max-width: 1200px;
+    width: 100%;
     margin: auto;
 }
 
 .global__container--padding-t-xl {
-    padding: 8em 0;
+    padding: 8em 0 0 0;
 }
 
 .global__container--padding-b-m {
@@ -139,6 +161,17 @@ html, body {
     padding: 8em 0;
 }
 
-.global--text-align-responsive {
+.global--text-align-responsive-lc {
     text-align: left;
+}
+
+.global--text-align-responsive-c {
+    text-align: center;
+}
+
+//Height class for single-post
+
+.global--single-post-h {
+    height: 100%;
+    flex: 1;
 }

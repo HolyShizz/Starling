@@ -18,6 +18,7 @@
 .mdc-card-container {
     font-family: 'Roboto', sans-serif;
     position: relative;
+    margin-top: -8em;
 
     .mdc-card {
         @include mdc-card-fill-color($primary-color);
@@ -123,7 +124,7 @@
     @include mdc-button-ink-color($dark-text);
 }
 
-//MDC Drawer styles
+//MaterialWeb Drawer styles
 
 .drawer-toggle {
     transition: 200ms linear;
@@ -160,3 +161,8 @@
     @include mdc-top-app-bar-icon-ink-color($color-whitesmoke);
     @include mdc-top-app-bar-ink-color($color-whitesmoke);
 }
+
+//Material Web Image List Styles
+.custom-image-list {
+    @include mdc-image-list-standard-columns(5);
+  }

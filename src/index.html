@@ -11,42 +11,76 @@
 </head>
 
 <body>
-    <aside class="mdc-drawer mdc-drawer--dismissible">
+    <aside class="mdc-drawer mdc-drawer--modal">
+        <div class="mdc-drawer__header">
+            <h3 class="mdc-drawer__title"><img src="./assets/images/logo-white.png" alt=""></h3>
+        </div>
         <div class="mdc-drawer__content">
             <nav class="mdc-list">
-                <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
-                    <span class="mdc-list-item__text">Inbox</span>
+                <a class="mdc-list-item mdc-list-item--activated" href="./index.html" aria-current="page">
+                    <span class="mdc-list-item__text">Главная</span>
                 </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-                    <span class="mdc-list-item__text">Outgoing</span>
+                <a class="mdc-list-item" href="./aboutUs.html">
+                    <span class="mdc-list-item__text">О нас</span>
                 </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
-                    <span class="mdc-list-item__text">Drafts</span>
+                <a class="mdc-list-item" href="./services.html">
+                    <span class="mdc-list-item__text">Услуги</span>
+                </a>
+                <a class="mdc-list-item" href="./contacts.html">
+                    <span class="mdc-list-item__text">Контакты</span>
                 </a>
             </nav>
+            <hr class="mdc-list-divider">
+            <div class="mdc-list">
+                <a href="" class="mdc-list-item">
+                    <i class="mdc-list-item__graphic fas fa-phone-volume"></i>
+                    <span class="mdc-list-item__text">8(093) 458-58-58</span>
+                </a>
+                <a href="" class="mdc-list-item">
+                        <i class="mdc-list-item__graphic fas fa-map-marker-alt"></i>
+                        <span class="mdc-list-item__text">Мы на карте</span>
+                </a>
+                <a href="" class="mdc-list-item">
+                        <i class="mdc-list-item__graphic far fa-envelope"></i>
+                        <span class="mdc-list-item__text">info@starling.com.ua</span>
+                </a>
+            </div>
         </div>
     </aside>
 
 
-    <div class="mdc-drawer-app-content">
+    <div class="mdc-drawer-scrim"></div>
+    <header class="mdc-top-app-bar mdc-top-app-bar mdc-top-app-bar--fixed app-bar d-lg-none d-flex" id="app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 
-        <header class="header">
+                <div class="menu__logo-container drawer-toggle">
+                    <div class="icons">
+                        <i class="fas fa-bars icon-default"></i>
+                        <i class="fas fa-arrow-left icon-hover"></i>
+                    </div>
+                    <img src="./assets/images/logo-white.png" alt="" class="menu__logo-content ">
+                </div>
+
+            </section>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <header class="header d-lg-block d-none">
             <div class="container-fluid">
                 <div class="menu menu--desktop row justify-content-end align-items-center">
 
                     <div class="menu__logo-container">
-                        <i class="fas fa-bars theme--primary d-lg-none d-inline-flex" id="drawer-toggle"></i>
                         <img src="./assets/images/logo-white.png" alt="" class="menu__logo-content ">
                     </div>
                     <nav class="d-none d-lg-flex">
                         <ul class="nav nav--desktop">
-                            <li class="nav__item nav__item--desktop"><a href="#">Главная</a></li>
-                            <li class="nav__item nav__item--desktop"><a href="#">О нас</a></li>
-                            <li class="nav__item nav__item--desktop"><a href="#">Контакты</a></li>
-                            <li class="nav__item nav__item--desktop nav__item--last"><a href="#">Услуги</a></li>
+                            <li class="nav__item nav__item--desktop"><a href="./index.html">Главная</a></li>
+                            <li class="nav__item nav__item--desktop"><a href="./aboutUs.html">О нас</a></li>
+                            <li class="nav__item nav__item--desktop"><a href="./contacts.html">Контакты</a></li>
+                            <li class="nav__item nav__item--desktop nav__item--last"><a href="./services.html">Услуги</a></li>
                         </ul>
                     </nav>
                     <div class="menu__contact d-none d-lg-flex">
@@ -57,7 +91,8 @@
                                 <path
                                     d="M19.23 15.26l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52c-.12-1.01-.97-1.77-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98z" />
                             </svg>
-                            <span class="mdc-button__label global--font-main mdc-button__label--color-white"> 093 378 23
+                            <span class="mdc-button__label global--font-main mdc-button__label--color-white"> 093
+                                378 23
                                 24</span>
                         </button>
                         <button class="mdc-button mdc-button__header--ml mdc-button--raised">
@@ -67,23 +102,25 @@
                 </div>
             </div>
         </header>
-        <section class="top-section">
-            <div class="global__container global__container--padding-t-xl">
+
+        <section class="bg-parallax top-section--bg-img">
+            <div class="global__container global__container--padding-tb-xl">
 
                 <div class="container-fluid">
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-6 col-12 global--font-main-b global--text-align-responsive">
-                            <h2 class="title__header title--size-xl">Starling <span class="theme--primary">The
-                                    Plumber</span>
+                            <h2 class="title__header title--size-xl">Сантехнические работы <span
+                                    class="theme--primary">любой сложности</span>
                             </h2>
                             <div class="global--separator-25"></div>
-                            <p class="global--font-secondary">HAVE A PLUMBING ISSUE? <strong>CALL 24 HOUR EMERGENCY
-                                    SERVICE.</strong>
+                            <p class="global--font-secondary title__p--uppercase">Проблемы с сантехникой?
+                                <strong>Оперативно отрегагируем в любое время 24/7</strong>
                             </p>
                             <div class="global--separator-m"></div>
                             <button class="mdc-button mdc-button--orange mdc-button--size-xl mdc-button--raised">
-                                <span class="mdc-button__label global--font-main-b">Рассчитать стоимость</span>
+                                <span class="mdc-button__label global--font-main-b">Вызвать мастера</span>
                             </button>
+                            <div class="global--separator-x"></div>
                         </div>
                         <div class="col-lg-6 col-12">
                             <img class="img-fluid" src="./assets/images/background_transparent_01.png" alt="">
@@ -102,12 +139,12 @@
                             </div>
                         </div>
                         <div class="mdc-card__text-area">
-                            <h4>residential Plumbing</h4>
-                            <p>Trusted expert residential plumbing & repair, serving homes.</p>
+                            <h4>Установка</h4>
+                            <p>Установка бойлера, смесителя, счетчиков, унитаза</p>
                         </div>
                         <div class="mdc-card__actions">
-                            <button class="mdc-button mdc-card__action mdc-card__action--button">
-                                <span class="mdc-button__label">Action 1</span>
+                            <button class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button">
+                                <span class="mdc-button__label">Заказать</span>
                             </button>
                         </div>
                     </div>
@@ -116,12 +153,12 @@
 
                         </div>
                         <div class="mdc-card__text-area">
-                            <h4>residential Plumbing</h4>
-                            <p>Trusted expert residential plumbing & repair, serving homes.</p>
+                            <h4>Замена</h4>
+                            <p>Замена труб канализации, водопроводных труб, унитазов</p>
                         </div>
                         <div class="mdc-card__actions">
-                            <button class="mdc-button mdc-card__action mdc-card__action--button">
-                                <span class="mdc-button__label  mdc-ripple-surface--accent">Action 1</span>
+                            <button class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button">
+                                <span class="mdc-button__label  mdc-ripple-surface--accent">Заказать</span>
                             </button>
                         </div>
                     </div>
@@ -130,12 +167,12 @@
 
                         </div>
                         <div class="mdc-card__text-area">
-                            <h4>residential Plumbing</h4>
-                            <p>Trusted expert residential plumbing & repair, serving homes.</p>
+                            <h4>Прочистка канализации</h4>
+                            <p>Мехническая<br>Гидравлическая</p>
                         </div>
                         <div class="mdc-card__actions">
-                            <button class="mdc-button mdc-card__action mdc-card__action--button">
-                                <span class="mdc-button__label">Action 1</span>
+                            <button class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button">
+                                <span class="mdc-button__label">Заказать</span>
                             </button>
                         </div>
                     </div>
@@ -168,7 +205,8 @@
                                         </div>
                                         <div class="media-custom__content-l">
                                             <h3 class="media-l__headline global--font-main">Протечка воды</h3>
-                                            <p class="media-l__text global--font-secondary">If you live in an apartment
+                                            <p class="media-l__text global--font-secondary">If you live in an
+                                                apartment
                                                 building, you’re sure to see a
                                                 sign put up by management to keep your faucet dripping.</p>
                                         </div>
@@ -180,7 +218,8 @@
                                         </div>
                                         <div class="media-custom__content-l">
                                             <h3 class="media-l__headline global--font-main">Протечка воды</h3>
-                                            <p class="media-l__text global--font-secondary">If you live in an apartment
+                                            <p class="media-l__text global--font-secondary">If you live in an
+                                                apartment
                                                 building, you’re sure to see a
                                                 sign put up by management to keep your faucet dripping.</p>
                                         </div>
@@ -212,7 +251,8 @@
                                         </div>
                                         <div class="media-custom__content-l">
                                             <h3 class="media-l__headline global--font-main">Протечка воды</h3>
-                                            <p class="media-l__text global--font-secondary">If you live in an apartment
+                                            <p class="media-l__text global--font-secondary">If you live in an
+                                                apartment
                                                 building, you’re sure to see a
                                                 sign put up by management to keep your faucet dripping.</p>
                                         </div>
@@ -224,7 +264,8 @@
                                         </div>
                                         <div class="media-custom__content-l">
                                             <h3 class="media-l__headline global--font-main">Протечка воды</h3>
-                                            <p class="media-l__text global--font-secondary">If you live in an apartment
+                                            <p class="media-l__text global--font-secondary">If you live in an
+                                                apartment
                                                 building, you’re sure to see a
                                                 sign put up by management to keep your faucet dripping.</p>
                                         </div>
@@ -256,7 +297,8 @@
                                         </div>
                                         <div class="media-custom__content-l">
                                             <h3 class="media-l__headline global--font-main">Протечка воды</h3>
-                                            <p class="media-l__text global--font-secondary">If you live in an apartment
+                                            <p class="media-l__text global--font-secondary">If you live in an
+                                                apartment
                                                 building, you’re sure to see a
                                                 sign put up by management to keep your faucet dripping.</p>
                                         </div>
@@ -268,7 +310,8 @@
                                         </div>
                                         <div class="media-custom__content-l">
                                             <h3 class="media-l__headline global--font-main">Протечка воды</h3>
-                                            <p class="media-l__text global--font-secondary">If you live in an apartment
+                                            <p class="media-l__text global--font-secondary">If you live in an
+                                                apartment
                                                 building, you’re sure to see a
                                                 sign put up by management to keep your faucet dripping.</p>
                                         </div>
@@ -287,12 +330,12 @@
                 <div class="container-fluid">
                     <div class="row justify-content-between align-items-stretch global--text-align-responsive ">
                         <div class="col-lg-8 col-12 mb-1 mt-1">
-                            <h3 class="global--font-main title--size-m title__header">Are you interested in an estimate?
+                            <h3 class="global--font-main title--size-m title__header">Воспользуйтесь нашим онлайн калькулятором для просчета стоимости и срока выполнения
                             </h3>
                         </div>
-                        <div class="col-lg-3 col-12 mb-1 mt-1 align-self-auto">
+                        <div class="col-lg-3 col-12 mb-1 mt-1 align-self-center">
                             <button class="mdc-button mdc-button--raised mdc-button--light global--font-main-b">
-                                <span class="mdc-button__label">Заказать просчёт</span>
+                                <span class="mdc-button__label">Онлайн калькулятор</span>
                             </button>
                         </div>
                     </div>
@@ -307,8 +350,8 @@
                         <div class="col-12">
                             <div class="title__header--background-square">
                                 <h3 class="title__header title--size-x global--font-main-b">
-                                    Regular <span class="theme--primary">plumbing care</span> <br>
-                                    will save your time & money
+                                    Вот <span class="theme--primary">3 причины</span> <br>
+                                    выбрать <span class="theme--primary">"ProHauz"</span>
                                 </h3>
                             </div>
                             <div class="global--separator-xl"></div>
@@ -317,16 +360,16 @@
                             <div class="counter__container global--font-main-b title__header title--size-xl">
                                 <div class="counter__symbols-holder">
                                     <div class="counter__digit-item counter--animated">
-                                        <span>6</span>
+                                        <span>1</span>
                                     </div>
                                     <div class="counter__digit-item counter--animated">
                                         <span>0</span>
                                     </div>
-                                    <span class="counter__text-item global--font-main">%</span>
+                                    <span class="counter__text-item global--font-main">лет</span>
                                 </div>
                                 <div class="global--separator-s"></div>
                                 <p class="counter__description global--font-secondary">
-                                    Household water usage that goes to toilets, showers & faucets
+                                    Успешной конкуриренции на рынке
                                 </p>
                             </div>
                         </div>
@@ -335,7 +378,7 @@
                             <div class="counter__container global--font-main-b title__header title--size-xl">
                                 <div class="counter__symbols-holder">
                                     <div class="counter__digit-item counter--animated">
-                                        <span>1</span>
+                                        <span>6</span>
                                     </div>
                                     <div class="counter__digit-item counter--animated">
                                         <span>2</span>
@@ -343,11 +386,13 @@
                                     <div class="counter__digit-item counter--animated">
                                         <span>0</span>
                                     </div>
-                                    <span class="counter__text-item global--font-main">$</span>
+                                    <div class="counter__digit-item counter--animated">
+                                            <span>0</span>
+                                        </div>
                                 </div>
                                 <div class="global--separator-s"></div>
                                 <p class="counter__description global--font-secondary">
-                                    Yearly savings by servicing your water leaks with 24 hour services available
+                                    Именно столько заказов мы выполнили за последние 5 лет
                                 </p>
                             </div>
                         </div>
@@ -356,20 +401,17 @@
                             <div class="counter__container global--font-main-b title__header title--size-xl">
                                 <div class="counter__symbols-holder">
                                     <div class="counter__digit-item counter--animated">
-                                        <span>7</span>
-                                    </div>
-                                    <div class="counter__digit-item counter--animated">
-                                        <span>0</span>
+                                        <span>5</span>
                                     </div>
                                     <div class="counter__digit-item counter--animated">
                                         <span>0</span>
                                     </div>
 
-                                    <span class="counter__text-item global--font-main">L</span>
+                                    <span class="counter__text-item global--font-main">+</span>
                                 </div>
                                 <div class="global--separator-s"></div>
                                 <p class="counter__description global--font-secondary">
-                                    The average US family can waste from household leaks
+                                    Довольных клиентов ежедневно
                                 </p>
                             </div>
                         </div>
@@ -428,23 +470,23 @@
                             <div class="global--separator-x"></div>
                             <div class="title__header--underline">
                                 <h3 class="title--size-s global--font-main">
-                                    Popular Services
+                                    Популярные услуги
                                 </h3>
                             </div>
                             <div class="global--separator-25"></div>
                             <ul
                                 class="footer__menu-container footer__menu-container--bb global--font-secondary theme--white-text">
                                 <li>
-                                    <a href="#">Furnace Inspection</a>
+                                    <a href="#">Проверка сифона</a>
                                 </li>
                                 <li>
-                                    <a href="#">Dry Sanitation</a>
+                                    <a href="#">Сухая чистка</a>
                                 </li>
                                 <li>
-                                    <a href="#">Water Filter</a>
+                                    <a href="#">Установка фильтра</a>
                                 </li>
                                 <li>
-                                    <a href="#">Basic Sanitation</a>
+                                    <a href="#">Полная чистка</a>
                                 </li>
                             </ul>
 
@@ -453,23 +495,23 @@
                             <div class="global--separator-x"></div>
                             <div class="title__header--underline">
                                 <h3 class="title--size-s global--font-main">
-                                    Emergency Tips
+                                    Полезные руководства
                                 </h3>
                             </div>
                             <div class="global--separator-25"></div>
                             <ul
                                 class="footer__menu-container footer__menu-container--bb global--font-secondary theme--white-text">
                                 <li>
-                                    <a href="#">Pipe Leaking</a>
+                                    <a href="#">Прорыв труб</a>
                                 </li>
                                 <li>
-                                    <a href="#">Bathroom Drain Cleaning</a>
+                                    <a href="#">Прочистка труб в ванной</a>
                                 </li>
                                 <li>
-                                    <a href="#">Garden Irrigation</a>
+                                    <a href="#">Настройка садового полива</a>
                                 </li>
                                 <li>
-                                    <a href="#">Law Drainage</a>
+                                    <a href="#">Канализационный слив</a>
                                 </li>
                             </ul>
 
@@ -478,7 +520,7 @@
                             <div class="global--separator-x"></div>
                             <div class="title__header--underline">
                                 <h3 class="title--size-s global--font-main">
-                                    Emergency Service
+                                    Срочный вызов сантехника
                                 </h3>
                             </div>
                             <div class="global--separator-25"></div>
@@ -496,7 +538,8 @@
                 </div>
             </div>
         </footer>
-    </div>
+
+    </main>
 </body>
 
 </html>
