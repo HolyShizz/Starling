@@ -162,7 +162,3 @@
     @include mdc-top-app-bar-ink-color($color-whitesmoke);
 }
 
-//Material Web Image List Styles
-.custom-image-list {
-    @include mdc-image-list-standard-columns(5);
-  }
