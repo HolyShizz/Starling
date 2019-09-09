@@ -47,3 +47,18 @@ $(document).ready(function(){
    adaptiveHeight: false
   });
 });
+
+
+//Header Color Change on scroll
+$(function() {
+  $(window).on("scroll", function() {
+      if($(window).scrollTop() > 50) {
+          $(".header").addClass("on-scroll");
+          $("#app-bar").addClass("on-scroll");
+      } else {
+          //remove the background property so it comes transparent again (defined in your css)
+         $(".header").removeClass("on-scroll");
+         $("#app-bar").removeClass("on-scroll");
+      }
+  });
+});

@@ -31,6 +31,11 @@
     //background-repeat: repeat-y;
     background-size: contain;
 }
+
+.our-projects-bg-img {
+    background-image: url("../images/background_heating_07.jpg");
+}
+
 //Header styles
 .header {
     width: 100%;
@@ -379,9 +384,17 @@ section.benefits {
         margin: auto;
         width: 15em;
         height: 15em;
-        border-color: $color-white;
+        
     }
 }
+
+.title__header--background-square-w:before {
+    border-color: $color-white;
+} 
+
+.title__header--background-square-b:before {
+    border-color: $dark-text;
+} 
 
 //Section advantages 
 .advantages {
@@ -499,4 +512,39 @@ section.benefits {
 
 .footer__menu-icons--justify-between {
     justify-content: space-between;
+}
+
+//Image Gallery styles
+
+.image-container--bordered {
+    border: 10px solid rgba(255,255,255,.2);
+    box-sizing: border-box; 
+}
+
+.image-container--bordered, .image-container {
+    overflow: hidden;
+    text-align: center;
+    img {
+        transition: all 300ms ease-in-out;
+    }
+}
+
+.image-container--bordered img:hover, .image-container img:hover {
+    transform: scale(1.2);
+    transition: all 300ms ease-in-out;
+}
+
+//Header Color Change on scroll
+
+.on-scroll {
+    position: fixed;
+    padding: 0;
+    .menu--desktop {
+        border-radius: 0;
+    }
+}
+
+header.on-scroll {
+    background-color:rgba(0, 0, 0, .85);
+    
 }

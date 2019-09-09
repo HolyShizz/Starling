@@ -81,8 +81,18 @@
         @include mdc-button-horizontal-padding(20px);
         height: 60px;
     }
+    .title__header--background-square {
+        min-height: 12em;
+    }
     .title__header--background-square:before {
-        width: 8em;
-        height: 8em;
+        width: 10em;
+        height: 10em;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .image-container {
+        margin-top: 1rem;
     }
 }

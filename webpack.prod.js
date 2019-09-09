@@ -129,6 +129,18 @@ module.exports = {
             chunks: 'index',
             filename: 'aboutUs.html'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/contacts.html',
+            inject: true,
+            chunks: 'index',
+            filename: 'contacts.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/services.html',
+            inject: true,
+            chunks: 'index',
+            filename: 'services.html'
+        }),
         new CleanWebpackPlugin(buildPath),
 
         new MiniCssExtractPlugin({
