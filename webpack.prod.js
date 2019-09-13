@@ -42,9 +42,14 @@ const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
     devtool: 'source-map',
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+        services: './src/services.js',
+        contacts: './src/contacts.js'
+    },
     output: {
-        filename: 'bundle.js',
+        
+        filename: '[name].bundle.js',
         path: buildPath
     },
     node: {
@@ -117,6 +122,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            //entry: 'index',
             template: './src/index.html',
             inject: true,
             chunks: 'index',
@@ -124,27 +130,30 @@ module.exports = {
         }),
 
         new HtmlWebpackPlugin({
+            //entry: 'index',
             template: './src/aboutUs.html',
             inject: true,
             chunks: 'index',
             filename: 'aboutUs.html'
         }),
         new HtmlWebpackPlugin({
+            //entry: 'contacts',
             template: './src/contacts.html',
             inject: true,
-            chunks: 'index',
+            chunks: 'contacts',
             filename: 'contacts.html'
         }),
         new HtmlWebpackPlugin({
+            //entry: 'services',
             template: './src/services.html',
             inject: true,
-            chunks: 'index',
+            chunks: 'services',
             filename: 'services.html'
         }),
         new CleanWebpackPlugin(buildPath),
 
         new MiniCssExtractPlugin({
-            filename: 'styles.css'
+            filename: '[name].styles.css'
         }),
         new OptimizeCssAssetsPlugin({
             cssProcessor: require('cssnano'),

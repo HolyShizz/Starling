@@ -39,12 +39,19 @@ const WorkboxPlugin = require('workbox-webpack-plugin');
 module.exports = {
     devtool: 'eval-cheap-module-source-map',
     entry: {
-        index: './src/index.js',
+        index: './src/index',
+        //contacts: './src/contacts.js',
+        services: './src/services'
     },
     devServer: {
         port: 8080,
         contentBase: path.join(__dirname, "src")
     },
+    output: {
+		path: path.join(__dirname, "dist"),
+        filename: "[name].js",
+        chunkFilename: "[id].chunk.js"
+	},
     node: {
         fs: 'empty'
     },
@@ -127,29 +134,31 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            entry: 'index',
             //template: './src/aboutUs.html',
             template: './src/index.html',
             inject: true,
-            chunks: 'index',
+            //chunks: 'index',
             filename: 'index.html'
         }),
         
         new HtmlWebpackPlugin({
             template: './src/aboutUs.html',
             inject: true,
-            chunks: 'index',
+            //chunks: 'index',
             filename: 'aboutUs.html'
         }),
         new HtmlWebpackPlugin({
             template: './src/contacts.html',
             inject: true,
-            chunks: 'index',
+            //chunks: 'contacts',
             filename: 'contacts.html'
         }),
         new HtmlWebpackPlugin({
+            entry: 'services',
             template: './src/services.html',
             inject: true,
-            chunks: 'index',
+            //chunks: 'services',
             filename: 'services.html'
         }),
        

@@ -9,8 +9,6 @@ const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
 //Material Drawer instantiation
 import {MDCDrawer} from "@material/drawer";
 const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
-//import {MDCTopAppBar} from "@material/top-app-bar";
-//const topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
 const listEl = document.querySelector('.mdc-drawer .mdc-list');
 const mainContentEl = document.querySelector('.main-content');
 const drawerToggle = document.querySelector('.drawer-toggle');
@@ -31,6 +29,8 @@ document.body.addEventListener('MDCDrawer:closed', () => {
   mainContentEl.querySelector('input, button').focus();
   drawerToggle.classList.remove('drawer-toggle--opened');
 });
+
+
 // Slick carousel
 import "../../../node_modules/jquery/dist/jquery";
 import $ from 'jquery';
@@ -44,6 +44,7 @@ $(document).ready(function(){
    dots: true,
    arrows: false,
    infinite: true,
+   autoplay: true,
    adaptiveHeight: false
   });
 });
@@ -62,3 +63,4 @@ $(function() {
       }
   });
 });
+

@@ -48,7 +48,10 @@
     "dependencies": {
         "@material/button": "^3.1.0",
         "@material/card": "^3.1.0",
+        "@material/data-table": "^3.2.0",
         "@material/drawer": "^3.1.1",
+        "@material/notched-outline": "^3.1.0",
+        "@material/textfield": "^3.1.0",
         "@material/top-app-bar": "^3.1.0",
         "bootstrap": "^4.3.1",
         "jquery": "^3.4.1",
