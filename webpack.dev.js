@@ -135,7 +135,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             entry: 'index',
-            //template: './src/aboutUs.html',
+            title: 'Главная',
             template: './src/index.html',
             inject: true,
             //chunks: 'index',
@@ -146,16 +146,19 @@ module.exports = {
             template: './src/aboutUs.html',
             inject: true,
             //chunks: 'index',
-            filename: 'aboutUs.html'
+            filename: 'aboutUs.html',
+            title: 'О компании'
         }),
         new HtmlWebpackPlugin({
             template: './src/contacts.html',
             inject: true,
             //chunks: 'contacts',
-            filename: 'contacts.html'
+            filename: 'contacts.html',
+            title: 'Контакты'
         }),
         new HtmlWebpackPlugin({
-            entry: 'services',
+            entry: 'services.js',
+            title: 'Услуги',
             template: './src/services.html',
             inject: true,
             //chunks: 'services',

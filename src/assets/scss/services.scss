@@ -40,6 +40,7 @@ $mdc-theme-on-secondary: whitesmoke;
 @import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 
 //Custom Styles
+@import "./accordion.scss";
 @import "./global.scss";
 @import "./modules.scss";
 @import "./components.scss";
